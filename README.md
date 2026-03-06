@@ -60,26 +60,10 @@ npm run dev
 The API is versioned at /api/v1/. Documentation can be accessed (after setup) at:
 - Swagger UI: http://localhost:5000/api-docs
 
-## Project Structure
-
-backend/
-├── prisma/             # Schema and Migrations
-├── src/
-│   ├── controllers/    # Business Logic
-│   ├── middleware/     # Auth and Validation
-│   ├── routes/         # Versioned API Endpoints
-│   ├── validations/    # Zod Schemas
-│   ├── db.js           # Database Connection
-│   └── server.js       # Entry Point
-frontend/
-├── src/
-│   ├── pages/          # Login, Register, Dashboard
-│   ├── api.js          # Axios Client
-│   └── App.jsx         # Routing Logic
-
 ## Scalability Note
 
 This project is built for scalability through:
 1. Stateless Auth: JWTs allow the backend to scale horizontally across multiple servers.
 2. Connection Pooling: Prisma handles database connections efficiently via pooling.
+
 3. Modular Design: Features are separated into distinct Controllers and Routes for easy migration to microservices.
